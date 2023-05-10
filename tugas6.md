@@ -23,4 +23,4 @@
 ![Alt text](screenshot/tugas6/UserRemoveAdmin.png)
 
 ## 8. User Deleted
-![Alt text](screenshot/tugas6/TodoUserDeleted.png)
+![Alt text](screenshot/tugas6/UserDeleted.png)
