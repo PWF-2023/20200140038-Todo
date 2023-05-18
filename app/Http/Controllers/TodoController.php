@@ -44,14 +44,20 @@ class TodoController extends Controller
     }
     public function edit(Todo $todo)
     {
-        if (auth()->user()->id == $todo->user_id) {
+        //if (auth()->user()->id == $todo->user_id) {
             // dd($todo);
-            return view('todo.edit', compact('todo'));
-        } else {
+            //return view('todo.edit', compact('todo'));
+        //} else {
             //abort(403);
             //abort(403, 'Not Authorized');
-            return redirect()->route('todo.index')->with('danger', 'You are not authorized to edit this todo!');
-        }
+            //return redirect()->route('todo.index')->with('danger', 'You are not authorized to edit this todo!');
+       // }
+
+       //CODE AFTER REFACTORING
+       if (auth()->user()->id == $todo->user_id){
+        return view('todo.edit',compact(('todo')));
+       }
+       return redirect()->route('todo.index')->with('danger','You are not authorized to edit this todo!');
 
     }
 
